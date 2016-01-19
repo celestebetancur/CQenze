@@ -3,7 +3,7 @@
 -----------------
 ###parasite for chucK
 -----------------
-Run ``./icqenze file`` if you want to compile and execute the compiled file, and then change ``file`` using any text editor , then by just saving the changes in the file, it will recompile automatically.
+Run ``./icqenze Live.cqz`` if you want to compile and execute the compiled file, and then change ``Live.cqz`` using any text editor , then by just saving the changes in the file, it will recompile automatically.
 Use ``./cqenze file output``to 'compile' to a CHmUsiCK's file.
 
 If you want to use your own samples, simply copy the folders
