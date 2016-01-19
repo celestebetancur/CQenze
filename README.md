@@ -3,10 +3,12 @@
 -----------------
 ###parasite for chucK
 -----------------
+To configure CQenze on your machine do:
+
+``./configure``.
+
 Run ``./icqenze Live.cqz`` if you want to compile and execute the compiled file, and then change ``Live.cqz`` using any text editor , then by just saving the changes in the file, it will recompile automatically.
 Use ``./cqenze file output``to 'compile' to a CHmUsiCK's file.
-
-Type ``exit`` to finish CQenze process.
 
 If you want to use your own samples, simply copy the folders
 in dirt folder.
