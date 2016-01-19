@@ -1,0 +1,5 @@
+#!/bin/bash
+
+flex cqz.l &&
+gcc lex.yy.c -o lex &&
+rm lex.yy.c
