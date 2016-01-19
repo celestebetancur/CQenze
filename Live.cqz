@@ -1,0 +1,22 @@
+// usando colores puedo visualizar patrones en el navegador.
+
+red:--+-----+-----+--;
+orange:+-+;
+
+
+
+// usando el nombre se samples genero secuencias de audio
+// asignando con ":" o con "=" cambia la forma de distribución
+// en el tiempo.
+
+sn:-+;
+cp=-+;
+bd:++;
+
+
+
+// Si escribo un string se deletrea en loop.
+
+//"ser o no ser";
+
+

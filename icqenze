@@ -1,0 +1,5 @@
+#!/bin/bash
+
+./cqenze $1 CQZtemp
+chuck Sampler.ck CQenze.ck &
+python recompileLIve.py
