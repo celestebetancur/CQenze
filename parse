@@ -82,25 +82,27 @@ idCount = 0
 
 try:
     filename = sys.argv[1]
-    
-    with open(filename,"r") as fileIn:
-        for line in fileIn:
-            if 'ID' in line:
-                i, ident = test(line[:-1])
-                table.append((checkID(ident),ident))
-                if ident not in IDs:
-                    IDs.append(ident)
-            elif 'PATTERN' in line:
-                table.append(test(line[:-1]))
-            elif 'STRING' in line:
-                string = line[:-1].split()
-                table.append((string[0],' '.join(string[1:])))
-            else:
-                table.append(line[:-1])
 except:
     print "The file to compile is missing."
+
+with open(filename,"r") as fileIn:
+    for line in fileIn:
+        if 'ID' in line:
+            i, ident = test(line[:-1])
+            table.append((checkID(ident),ident))
+            if ident not in IDs:
+                IDs.append(ident)
+        elif 'PATTERN' in line:
+            table.append(test(line[:-1]))
+        elif 'NUMBER' in line:
+            i, ident = test(line[:-1])
+            table.append((i, ident))
+        elif 'STRING' in line:
+            string = line[:-1].split()
+            table.append((string[0],' '.join(string[1:])))
+        else:
+            table.append(line[:-1])
     
-            
 for n,token in enumerate(table):
     try:
         token, Ident = token
@@ -126,7 +128,7 @@ def checkNumSamples(array,samp,arg):
             if arg <= j:
                 return j
             else:
-                print "Syntax error: \'%s\' have \'%i\' samples, \'%i\' is too big." % (samp,j,arg)
+                print "Syntax error: \'%s\' have \'%i\' samples, \'%i\' is too big." % (samp,j,int(arg))
                 return 1
 
 def patternConvert(pattern):
@@ -175,14 +177,22 @@ for n,sentence in enumerate(stm):
         colorsList.append('#'+colortoHX(color))
         patternList.append(patternConvertC(pattern))
     elif sentence == ' IDM ASSIGN_SAMP NUMBER ASSIGN_T PATTERN END':
-        pass
+        samp, num, pattern = identSTM[n].split()
+        checkNumSamples(samples_cap,samp,num)
+        neck = neck + 'Sampler d%i => gate;\n' %IDnum(samp)
+        files = files + 'd%i.file(\"%s\","%s");\n' %(IDnum(samp),samp,num)
+        body = body + 'spork~d%i.soundT([%s]);\n' %(IDnum(samp),patternConvert(pattern))
     elif sentence == ' IDM ASSIGN_SAMP NUMBER ASSIGN_C PATTERN END':
-        pass
+        samp, num, pattern = identSTM[n].split()
+        checkNumSamples(samples_cap,samp,num)
+        neck = neck + 'Sampler d%i => gate;\n' %IDnum(samp)
+        files = files + 'd%i.file(\"%s\","%s");\n' %(IDnum(samp),samp,num)
+        body = body + 'spork~d%i.soundC([%s]);\n' %(IDnum(samp),patternConvert(pattern))
     elif sentence == ' STRING END':
         neck = neck + 'Sampler dr => gate;\n'
         body = body + 'spork~dr.read(%s,%i);\n' %(identSTM[n],len(identSTM[n])-3)
     else:
-        print 'Syntax error: %i statement is not a valid CQenze syntax' %n
+        print 'Syntax error: %i statement is not a valid CQenze syntax' %(n+1)
 
 cqzColors(colorsList,patternList)
 

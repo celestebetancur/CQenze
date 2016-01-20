@@ -12,7 +12,7 @@ digit           [0-9]
 \"[^$]*\"                             printf("STRING %s\n", yytext);
 \/\/[^\n]*                            ;
 {letter}*(letter|digit)*              printf("ID %s\n", yytext);
-{digit}+                              printf("NUMBER\n");
+{digit}+                              printf("NUMBER %s\n", yytext);
 \/                                    printf("ASSIGN_SAMP\n");
 \{                                    printf("LEFTP\n");
 \}                                    printf("RIGHTP\n");

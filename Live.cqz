@@ -9,13 +9,13 @@ orange:+-+;
 // asignando con ":" o con "=" cambia la forma de distribución
 // en el tiempo.
 
-sn:-+;
-cp=-+;
-bd:++;
-
+sn :-+;
+cp =-+;
+bd :++;
+wobble =+;
 
 // Si escribo un string se deletrea en loop.
 
-//"ser o no ser";
+"ser o no ser ";
 
 
