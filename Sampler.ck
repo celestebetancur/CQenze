@@ -5,9 +5,10 @@ public class Sampler extends Chubgraph
     //8 => int Division;
     32 => int Division;
     
+    static int TEMPO;
+    
     "" => string fileName;
     
-	
     public string file(string name, string letter)
     {
         if (letter == "")
@@ -23,7 +24,9 @@ public class Sampler extends Chubgraph
 
     public void soundT(int sample[])
     {
-		(2.0/(sample.cap()*4))::second => dur beat;
+        (60.0/TEMPO) * 4 => float sec;
+		(sec/(sample.cap()*4))::second => dur beat;
+        
         while(true)
         {
             for(0 => int i; i < sample.cap(); i++)
@@ -45,6 +48,7 @@ public class Sampler extends Chubgraph
     }
     public void soundC(int sample[])
     {
+        ((60.0/TEMPO)/4)::second => dur beat;
         while(true)
         {
             for(0 => int i; i < sample.cap(); i++)
@@ -54,19 +58,20 @@ public class Sampler extends Chubgraph
                     envelope.keyOn();
                     0 => buffer.pos;
                 }
-                0.125::second => now;
+                beat => now;
                 
                 if (sample[i] == 0)
                 {
                     envelope.keyOff();
                 }
-                0.125::second => now;
+                beat => now;
             }
         }
     }
     public void read(string text, int len)
     {
-        (2.0/len)::second => dur beat;
+        ((60.0/TEMPO)/4)::second => dur beat;
+        
         while(true)
         {
             for(0 => int i; i < len; i++)

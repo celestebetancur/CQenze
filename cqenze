@@ -1,5 +1,6 @@
 #!/bin/bash
 
-cat $1 | ./lex > .OutputLex
-./parse .OutputLex $2
-
+./translate $1 CQZtemp
+chuck --loop Sampler.ck CQZtemp.ck &
+python recompileLive.py
+rm CQZtemp.ck

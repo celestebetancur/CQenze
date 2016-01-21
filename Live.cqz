@@ -9,10 +9,11 @@ orange:+-+;
 // asignando con ":" o con "=" cambia la forma de distribución
 // en el tiempo.
 
+tempo 120;
+
 sn :-+;
 cp =-+;
 bd :++;
-wobble =+;
 
 // Si escribo un string se deletrea en loop.
 

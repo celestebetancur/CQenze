@@ -1,6 +1,0 @@
-#!/bin/bash
-
-./cqenze $1 CQZtemp
-chuck --loop Sampler.ck CQenze.ck &
-python recompileLive.py
-rm CQZtemp.ck

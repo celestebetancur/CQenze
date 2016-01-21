@@ -9,6 +9,7 @@ digit           [0-9]
 
 %%
 ;                                     printf("END\n");
+tempo                                 printf("TEMPO\n");
 \"[^$]*\"                             printf("STRING %s\n", yytext);
 \/\/[^\n]*                            ;
 {letter}*(letter|digit)*              printf("ID %s\n", yytext);
