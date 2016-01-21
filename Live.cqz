@@ -4,12 +4,11 @@ red:--+-----+-----+--;
 orange:+-+;
 
 
-
 // usando el nombre se samples genero secuencias de audio
 // asignando con ":" o con "=" cambia la forma de distribución
 // en el tiempo.
 
-tempo 120;
+tempo 120; // numero entero para determinar el bpm
 
 sn :-+;
 cp =-+;

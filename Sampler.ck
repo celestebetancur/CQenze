@@ -1,3 +1,11 @@
+//
+// Sampler.ck
+// CHmUsiCK
+// Created in 2015 by Esteban Betancur
+//
+// Medellin - Colombia
+//
+
 public class Sampler extends Chubgraph
 { 
     SndBuf buffer => Envelope envelope => dac;
