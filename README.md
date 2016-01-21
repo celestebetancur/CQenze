@@ -7,8 +7,7 @@ To configure CQenze on your machine do:
 
 ``./configure``.
 
-Run ``./icqenze Live.cqz`` if you want to compile and execute the compiled file, and then change ``Live.cqz`` using any text editor , then by just saving the changes in the file, it will recompile automatically.
-Use ``./cqenze file output``to 'compile' to a CHmUsiCK's file.
+Run ``./cqenze Live.cqz`` if you want to compile and execute the compiled file, and then change ``Live.cqz`` using any text editor , then by just saving the changes in the file, it will recompile automatically.
 
 If you want to use your own samples, simply copy the folders
 in dirt folder.
@@ -21,7 +20,7 @@ Only ``.wav`` for now.
 ## Tutorial
 -----------------
 
-See the sample code, Live.cqz
+See the sample code, Live.cqz.
 
 Choose a word from this list:
 (Every word represents a sample)
