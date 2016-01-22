@@ -128,7 +128,7 @@ for n,token in enumerate(table):
 def checkNumSamples(array,samp,arg):
     for i,j in array:
         if i == samp:
-            if arg <= j:
+            if int(arg) <= j:
                 return j
             else:
                 print "Syntax error: \'%s\' have \'%i\' samples, \'%i\' is too big." % (samp,j,int(arg))

@@ -11,8 +11,8 @@ orange:+-+;
 tempo 120; // numero entero para determinar el bpm
 
 sn :-+;
-cp =-+;
-bd :++;
+cp =--+-;
+bd/4 :++;
 
 // Si escribo un string se deletrea en loop.
 
