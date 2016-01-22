@@ -20,10 +20,31 @@ Only ``.wav`` for now.
 ## Tutorial
 -----------------
 
-See the sample code, Live.cqz.
+See the sample code, Live.cqz:
+
+```
+// this is a comment and is ignored by the compiler
+
+tempo 120; // set tempo
+
+//Audio patterns
+
+sn :-+;
+cp =--+-;
+bd/4 :++;
+
+//Color patterns - open CQenzeVisual/CQenze.html to visualize
+
+indianred:--+-----+-----+--;
+orange:+-+;
+
+//write a string 
+
+"ser o no ser";  
+```
 
 Choose a word from this list:
-(Every word represents a sample)
+(Every word represents a sample or a folder with samples)
 ```
 ab ade adesa adesb adesc alex alphabet amencutup armora arp arpy auto baa ba bass bassa bassb
 bassc bassd bassdm bassfoo battles bd bend bev bin birds3 bleep blip blue bottle breaksa
@@ -62,7 +83,7 @@ ghostwhite honeydew ivory azure snow black dimgray gray darkgray silver lightgra
 gainsboro whitesmoke white
 ```
 
-If you choose a sample ``bd`` write one of this ``:`` or ``=``; if you choose a color
+If you choose a sample: ``bd``, write ``:`` or ``=``; if you choose a color
 use ``:``:
 
 ``bd :`` or ``bd =`` or ``red :``.
@@ -70,6 +91,10 @@ use ``:``:
 Then write a pattern like ``+--+--+`` and ``;`` at the end:
 
 ``bd : +--+--+;``or ``bd = +--+--+;`` or ``red : +--+--+;``.
+
+If you want a diferent sample with the same name-folder write ``bd/4`` :
+
+``bd/4 : ++;``.
 
 To change the tempo write:
 
