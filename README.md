@@ -1,7 +1,12 @@
 # CQenze 0.1.5
 ### (from SimpleCode 0.1.4)
 -----------------
-###parasite for chucK
+### (minilanguage on top of chucK)
+
+CQenze is a minilanguage designed to make musical (or color) patterns that uses an implicit cyclic timing (Tidal ``:``),
+and a variation ``=`` that being also cyclic synchronizes musical events 'strictly'.
+
+Build on top of chuck language, uses chuck real-time audio capabilities.
 -----------------
 To configure CQenze on your machine do:
 
@@ -99,6 +104,10 @@ If you want a diferent sample with the same name-folder write ``bd/4`` :
 To change the tempo write:
 
 ``tempo 140;`` or any integer you want.
+
+To change the number of cycles per loop:
+
+``cycles 2;`` or any integer.
 
 
 And just for fun write:
