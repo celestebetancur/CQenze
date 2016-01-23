@@ -9,13 +9,15 @@ orange:+-+;
 // en el tiempo.
 
 tempo 120; // numero entero para determinar el bpm
+cycles 4; // numero entero, cambia el numero de cyclos antes de relanzar el loop
 
 sn :-+;
-cp =--+-;
+cp =--+-++++; 
 bd/4 :++;
+odx =--+-+++-++;
 
 // Si escribo un string se deletrea en loop.
 
-"ser o no ser ";
+//"ser o no ser ";
 
 

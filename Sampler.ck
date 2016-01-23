@@ -10,9 +10,7 @@ public class Sampler extends Chubgraph
 { 
     SndBuf buffer => Envelope envelope => dac;
 
-    //8 => int Division;
-    32 => int Division;
-    
+    static int CYCLES;
     static int TEMPO;
     
     "" => string fileName;
@@ -32,7 +30,7 @@ public class Sampler extends Chubgraph
 
     public void soundT(int sample[])
     {
-        (60.0/TEMPO) * 4 => float sec;
+        (60.0/TEMPO) * (CYCLES * 2) => float sec;
 		(sec/(sample.cap()*4))::second => dur beat;
         
         while(true)
