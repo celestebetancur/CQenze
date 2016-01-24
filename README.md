@@ -5,8 +5,8 @@
 
 CQenze is a minilanguage designed to make musical (or color) patterns that uses an implicit cyclic timing (Tidal ``:``),
 and a variation ``=`` that being also cyclic synchronizes musical events 'strictly'.
-
 Build on top of chuck language, uses chuck real-time audio capabilities.
+
 -----------------
 To configure CQenze on your machine do:
 
