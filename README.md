@@ -31,6 +31,7 @@ See the sample code, Live.cqz:
 // this is a comment and is ignored by the compiler
 
 tempo 120; // set tempo
+cycles 2; // set number of cycles before restart loop
 
 //Audio patterns
 
