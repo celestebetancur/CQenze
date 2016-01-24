@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cat $1 | ./lex > .OutputLex
+cat $1 | ./src/lex > .OutputLex
 ./parse .OutputLex $2
 

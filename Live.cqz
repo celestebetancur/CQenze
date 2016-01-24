@@ -2,14 +2,14 @@
 
 indianred:--+-----+-----+--;
 orange:+-+;
-
+red : -+-; 
 
 // usando el nombre se samples genero secuencias de audio
 // asignando con ":" o con "=" cambia la forma de distribución
 // en el tiempo.
 
 tempo 120; // numero entero para determinar el bpm
-cycles 4; // numero entero, cambia el numero de cyclos antes de relanzar el loop
+cycles 3; // numero entero, cambia el numero de cyclos antes de relanzar el loop
 
 sn :-+;
 cp =--+-++++; 

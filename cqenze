@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./translate $1 CQZtemp
-chuck --loop Sampler.ck CQZtemp.ck &
-python recompileLive.py
-rm CQZtemp.ck
+./src/translate $1 .CQZtemp
+chuck --loop CHmUsiCK/Sampler.ck .CQZtemp.ck &
+./src/recompileLive
+rm .CQZtemp.ck

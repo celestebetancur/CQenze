@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+
+from subprocess import call
+import time
+
+while(True):
+    try:
+        time.sleep(1)
+        call(["./src/translate","Live.cqz"])
+    except (KeyboardInterrupt, SystemExit):
+        print "\nleaving CQenze..\n"
+        quit()
+ 

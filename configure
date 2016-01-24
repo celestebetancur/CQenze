@@ -1,5 +1,5 @@
 #!/bin/bash
 
-flex cqz.l &&
-gcc lex.yy.c -o lex &&
+flex src/cqz.l
+gcc lex.yy.c -o src/lex
 rm lex.yy.c

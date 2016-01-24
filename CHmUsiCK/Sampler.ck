@@ -22,7 +22,7 @@ public class Sampler extends Chubgraph
             "1" => letter;
         }
         
-        me.dir() + "dirt/" + name + "/" + letter + ".wav" => fileName; //Mac/Linux conflict with path
+        me.dir(-1) + "dirt/" + name + "/" + letter + ".wav" => fileName; //Mac/Linux conflict with path
         fileName => buffer.read;
         
         return fileName;
