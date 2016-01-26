@@ -31,7 +31,7 @@ public class Sampler extends Chubgraph
     public void soundT(int sample[])
     {
         (60.0/TEMPO) * (CYCLES * 2) => float sec;
-		(sec/(sample.cap()*4))::second => dur beat;
+		(sec/(sample.cap()*2)) => float beat;
         
         while(true)
         {
@@ -41,14 +41,14 @@ public class Sampler extends Chubgraph
                 {
                     envelope.keyOn();
                     0 => buffer.pos;
+                    beat::second => now;
                 }
-                beat => now;
-                
-                if (sample[i] == 0)
+                else if (sample[i] == 0)
                 {
                     envelope.keyOff();
+                    beat::second => now;
                 }
-                beat => now;
+                
             }
         }
     }

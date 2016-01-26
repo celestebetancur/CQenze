@@ -3,4 +3,4 @@
 ./src/translate $1 .CQZtemp
 chuck --loop CHmUsiCK/Sampler.ck .CQZtemp.ck &
 ./src/recompileLive
-rm .CQZtemp.ck
+rm .CQZtemp.ck .Outputlex .multiLive

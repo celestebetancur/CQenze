@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sort $1 | uniq > .multiLive
 cat $1 | ./src/lex > .OutputLex
 ./parse .OutputLex $2
 
