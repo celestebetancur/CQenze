@@ -6,11 +6,11 @@ import time, os
 while(True):
     try:
         #size = os.path.getsize("Live.cqz")
-        time.sleep(1)
-        #if size <= 1:
+        time.sleep(0.2)
+        #if size >= 1:
         call(["./src/translate","Live.cqz"])
-            #with open("Live.cqz","w") as live:
-            #    live.write("")
+        #    with open("Live.cqz","w") as live:
+        #        live.write("")
     except (KeyboardInterrupt, SystemExit):
         print "\nleaving CQenze..\n"
         quit()
