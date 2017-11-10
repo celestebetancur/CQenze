@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ./src/translate $1 .CQZtemp
-chuck --loop CHmUsiCK/Sampler.ck .CQZtemp.ck &
+chuck --loop CHmUsiCK/Library.ck &
+chuck .CQZtemp.ck &
 ./src/recompileLive
 rm .CQZtemp.ck .OutputLex .multiLive
